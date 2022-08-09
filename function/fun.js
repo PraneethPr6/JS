@@ -32,43 +32,36 @@ function add() {
      var x = 20;
  };
 // Print output
-//  var x = 21;
-//  a(); //reference error
-//  b();
-//  console.log(a);
-//  a = function() {
-//      x = 20;
-//      console.log(x);
-//  };
-//  b = function() {
-//      x = 40;
-//      console.log(x);
-//  };
+ var x = 21;
+ a(); //reference error
+ b();
+ console.log(a);
+ a = function() {
+     x = 20;
+     console.log(x);
+ };
+ b = function() {
+     x = 40;
+     console.log(x);
+ };
 
-var p = 1
+// factorial
+
+let result=1
 function fact(n)
 {
     if(n==0)
-    console.log("1");
-    else {
-        for (let i=1<i<=n;i++)
-    {
-        p = p*i;
+    console.log("1")
+    else if(n<0){
+        console.log("nothing");
     }
-    console.log(p);
+    else{
+    for(let i=1;i<=n;i++)
+    {
+        result = result*i;
+    }
+    console.log(result)
 }
 }
-fact(5);
-function factorial(n){
-    let answer = 1;
-    if (n == 0 || n == 1){
-      return answer;
-    }else{
-      for(var i = n; i >= 1; i--){
-        answer = answer * i;
-      }
-      return answer;
-    }  
-  }
-
-  console.log(factorial(7));
+ fact(5);
+ 
