@@ -117,6 +117,16 @@ const getId=new Promise((resolve, reject)=>{  //resolve,rejected are the executo
 		console.log("end of promise");
 	  });
 //Create examples to explain callback function
+function name (z) { 
+    console.log(z);
+}
+
+function example(x, y, sum) { 
+    let result = x + y;
+    sum(result);
+}
+
+example(23, 54, names);
 
 //Create examples to explain callback hell function
 const getEmpId = () => {
@@ -222,6 +232,10 @@ const getIds=new Promise((resolve, reject)=>{  //resolve,rejected are the execut
     }
     
     callAllFunctions();
+
+    
+
+
 
     
 
