@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>1. Difference between “ == “ and “ === “ operators.</h2>
+    <p><b>ANS.</b> "==" and "===" both comes under relational operator.</p>
+    <p> "==" :The == operator means "is equal to," matching by value only.</p>
+    <p> "===":The === operator means "is exactly equal to," matching by both value and data type.</p>
+    <h2>2. What is the spread operator?</h2>
+    <p><b>ANS.</b> The JavaScript spread operator is denoted like this (...) and
+        used to expand or iterables which is introduced in 2015 Es6.
+        it allows us to quickly copy all or part of an existing array or object into another array or object.
+        used to expand or iterables which is introduced in 2015 Es6.</p>
+    <pre>
+        const odd = [1,3,5]; 
+            const combined = [2,4,6, ...odd];
+               console.log(combined); // [ 2, 4, 6, 1, 3, 5 ]
+    </pre>
+    <h2>3. What are the differences between var, let and const?</h2>
+    <b>ANS.</b>
+    <table border="3px">
+        <tr>
+            <th>VAR</th>
+            <th>LET</th>
+            <th>CONST</th>
+        </tr>
+        <tr>
+            <th>we can declare the variable name in one line and initalize it on another line</th>
+            <th>we can declare the variable name in one line and initalize it on another line(or)in the same line itself
+            </th>
+            <th>we can declare the variable and initalize in the same line itself </th>
+        </tr>
+        <tr>
+            <th>two variables with same name aren't possible with VAR</th>
+            <th>two variables with same name aren't possible with LET</th>
+            <th>two variables with same name aren't possible with CONST</th>
+        </tr>
+        <tr>
+            <th>we can reassgin/update the values of the variable which have already been initalized</th>
+            <th>we can reassgin/update the values of the variable which have already been initalized</th>
+            <th>we can't reassgin/update the values of the variable which have already been initalized</th>
+        </tr>
+        <tr>
+            <th>VAR is global scoped</th>
+            <th>LET is block scoped</th>
+            <th>CONST is block scoped</th>
+        </tr>
+        <tr>
+            <th>VAR supports hoisting</th>
+            <th>LET doesn't supports hoisting</th>
+            <th>CONST doesn't supports hoisting</th>
+        </tr>
+    </table>
+    <h2>4&5. What is execution context</h2>
+    <p><b>ANS.</b> The creation of <b>"Execution Context"</b>happens in two phases.They are:
+    <ol>
+        <li>Creation Phase.</li>
+        <li>Execution Phase.</li>
+    </ol>
+    <center>
+        <table border="3px">
+            <tr>
+                <th>Creation Phase</th>
+                <th>Execution Phase</th>
+
+            </tr>
+            <tr>
+                <td>Memory is allocated</td>
+                <td> Execution of code starts</td>
+            </tr>
+            <tr>
+                <td>It is also called "Variable Environment".</td>
+                <td>It is also called "Thread of Execution".</td>
+            </tr>
+
+        </table>
+    </center>
+    <ul>
+        <li>When memory is allocates what does it stores means a special value called "undefined"</li>
+        <li>Once code execution starts the "undefined" is updated with the value assigned to the Variable.</li>
+        <li>In case of functions it literally stores whole code of the function inside memory space,
+            Once it starts to execute another execution context is created inside the global execution context.</li>
+    </ul>
+    </p>
+    <h2>6. What is meant by first class functions</h2>
+    <p><b>ANS.</b> It is also called as first class citizen First-Class Function: A programming language is said to have
+        First-class functions.
+        If functions in that language are treated like other variables.
+        So the functions can be assigned to any other variable or passed as an argument or can be returned by another
+        function.
+    </p>
+    <h2>7. What are closures? Give an example of closure</h2>
+    <p><b>ANS.</b>A closure is a function that references variables in the outer scope from its inner scope. The closure
+        preserves the outer scope inside its inner scope.
+        Lexical scoping defines the scope of a variable by the position of that variable declared in the source code.
+    </p>
+    <pre>
+    var name = "John";
+
+    function greeting() {
+      var message = "Hi";
+      console.log(message);
+      
+    }
+       greeting()    //Hi
+</pre>
+    <ul type="dash">
+        <li>The variable "name" is a global variable. It is accessible from anywhere including within the greeting()
+            function.</li>
+        <li>The variable "message" is a local variable that is accessible only within the greeting() function.</li>
+        <li>If you try to access the message variable outside the greeting() function, you will get an error.</li>
+        <li>So the JavaScript engine uses the scope to manage the variable accessibility.</li>
+    </ul>
+</body>
+
+</html>
